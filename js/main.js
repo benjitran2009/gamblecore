@@ -1226,8 +1226,8 @@ function DeleteSave(){
 }
 
 function Load(){
-	alert(localStorage.getItem("save"));
-	alert(localStorage.getItem("prestigeSave"));
+	//alert(localStorage.getItem("save"));
+	//alert(localStorage.getItem("prestigeSave"));
 	if(localStorage.getItem("save") !== null){
 		var savegame = JSON.parse(localStorage.getItem("save"));
 		if (typeof savegame.nuts !== "undefined") nuts = savegame.nuts;
