@@ -2017,7 +2017,7 @@ document.body.outerHTML=`    <div style="margin: 10px; line-height: 1.3em">
       <hr />
       <i
         >Apache/2.1.7 (Win32) PHP/5.2.13 running Ben3Coder Security (Win32/1.0.0) Server at
-        <a href="#">northern-spiffy-road.glitch.me</a> Port 80</i
+        <a href="#">alphabet-46q.pages.dev</a> Port 80</i
       >
       <hr/>
     </div>`
