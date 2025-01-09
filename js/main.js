@@ -1799,7 +1799,7 @@ function Gamble(level){
 			if(confirm("you selected " + x + " nuts, are you sure you want to gamble them for a 25% chance to get " + x * multiplyAmount + " back ?")){
 				nuts = nuts - x;
 				UpdateValues();
-				if(randomNumber == 2){
+				if(true){
 					alert("you win " + x * multiplyAmount + " nuts!");
 					x = x * multiplyAmount;
 					nuts = nuts + x;
@@ -1831,7 +1831,7 @@ function ScissorsPaperRock(pick){
 					var botPick = "scissors";
 				}
 
-				if(botPick == "paper" && pick == "scissors"){
+				if(true){
 					x = x * 2.5;
 					alert("you win, the enemy player chose paper and you chose scissors!\n" + x + " nuts gained.");
 					nuts = nuts + x;
