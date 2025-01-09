@@ -1,9 +1,12 @@
-// Epic messy code Baby !!
-// Epic messy code Baby !!
-// Epic messy code Baby !!
-// Epic messy code Baby !!
-// Epic messy code Baby !!
-// Epic messy code Baby !!
+/**
+ * 
+ * nSimulator Beta - v1.0.0
+ * (C) Ben3Coder Software - https://ben3coder.dev
+ * 
+ * Based off of the (/nutsimulator.github.io) project.
+ * https://github.com/nutsimulator-archive/nutsimulator.github.io
+ * 
+ **/
 
 var nuts = 0;
 var maxNuts = 0;
@@ -760,6 +763,57 @@ function showMenu() {
 			document.getElementById('menuButton3').disabled = true;
 		}
 	} else {
+		if(menu.style.opacity < "1"){
+			menu.style.opacity = "1";
+			menu.style.height = "30px";
+			menu.style.left = "25vw";
+			document.getElementById('menuButton').style.cursor = "pointer";
+			document.getElementById('menuButton2').style.cursor = "pointer";
+			document.getElementById('menuButton3').style.cursor = "pointer";
+			document.getElementById('menuButton').disabled = false;
+			document.getElementById('menuButton2').disabled = false;
+			document.getElementById('menuButton3').disabled = false;
+		} else {
+			menu.style.opacity = "0";
+			menu.style.height = "0px";
+			menu.style.left = "17vw";
+			document.getElementById('menuButton').style.cursor = "default";
+			document.getElementById('menuButton2').style.cursor = "default";
+			document.getElementById('menuButton3').style.cursor = "default";
+			document.getElementById('menuButton').disabled = true;
+			document.getElementById('menuButton2').disabled = true;
+			document.getElementById('menuButton3').disabled = true;
+		}
+	}
+}
+
+function showAdminMenu() {
+	var menu = document.getElementById('menu');
+	if(page != "mobile.html"){
+		if(menu.style.opacity < "1"){
+			menu.style.pointerEvents = "auto";
+			menu.style.opacity = "1";
+			menu.style.left = "8vw";
+			document.getElementById('adminmenuButton').style.cursor = "pointer";
+			document.getElementById('adminmenuButton2').style.cursor = "pointer";
+			document.getElementById('adminmenuButton3').style.cursor = "pointer";
+			document.getElementById('adminmenuButton').disabled = false;
+			document.getElementById('adminmenuButton2').disabled = false;
+			document.getElementById('adminmenuButton3').disabled = false;
+		} else {
+			menu.style.left = "6.5vw";
+			menu.style.opacity = "0";
+			menu.style.pointerEvents = "none";
+			document.getElementById('adminmenuButton').style.cursor = "default";
+			document.getElementById('adminmenuButton2').style.cursor = "default";
+			document.getElementById('adminmenuButton3').style.cursor = "default";
+			document.getElementById('adminmenuButton').disabled = true;
+			document.getElementById('adminmenuButton2').disabled = true;
+			document.getElementById('adminmenuButton3').disabled = true;
+		}
+	} else {
+		alert("admin panel disabled on mobile");
+		return;
 		if(menu.style.opacity < "1"){
 			menu.style.opacity = "1";
 			menu.style.height = "30px";
