@@ -788,7 +788,7 @@ function showMenu() {
 }
 
 function showAdminMenu() {
-	var menu = document.getElementById('menu');
+	var menu = document.getElementById('amenu');
 	if(page != "mobile.html"){
 		if(menu.style.opacity < "1"){
 			menu.style.pointerEvents = "auto";
