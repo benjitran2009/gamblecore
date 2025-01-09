@@ -1754,7 +1754,7 @@ function UpdateDamage(){
 	totalDamage = round((prestigeGain + levelMultiplier) * (nutKidDamage * nutKids + nutBoyDamage * nutBoys + nutManDamage * nutMen + nutFarmDamage * nutFarms + nutFactoryDamage * nutFactories + nutBankDamage * nutBanks + nutEmpireDamage * nutEmpires + nutWorldControlDamage * nutWorldControls + nutGalacticReignDamage * nutGalacticReigns + deezNutGuyDamage * deezNutGuys + nutTimeTravelDamage * nutTimeTravels + nutUniversalDominationDamage * nutUniversalDominations + nutGodDamage * nutGods + nutAfterlifeDamage * nutAfterlives));
 }
 
-/*function CheckMobile(){
+function CheckMobile(){
 	var ratio = window.innerWidth / window.innerHeight;
 	if(ratio < 0.745 && page == "index.html"){
 		window.location.href = "mobile.html";
@@ -1763,7 +1763,7 @@ function UpdateDamage(){
 	} else if (ratio < 0.745 && page == ""){
 		window.location.href = "mobile.html";
 	}
-}*/
+}
 
 function Gamble(level){
 	switch(level){
