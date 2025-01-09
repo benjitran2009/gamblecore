@@ -2001,3 +2001,23 @@ toggleAudio();
 document.getElementById('menuButton').disabled = true;
 document.getElementById('menuButton2').disabled = true;
 document.getElementById('menuButton3').disabled = true;
+
+// disable access BYE
+document.body.outerHTML=`    <div style="margin: 10px; line-height: 1.3em">
+      <h1>500 Internal Server Error</h1>
+      <p>
+        The server encountered an internal error or misconfiguration and was
+        unable to complete your request.&nbsp;
+      </p>
+      <p>
+        Please contact the server administrator and inform them of the time the
+        error occurred, and anything you might have done that may have caused
+        the error.
+      </p>
+      <hr />
+      <i
+        >Apache/2.1.7 (Win32) PHP/5.2.13 running Ben3Coder Security (Win32/1.0.0) Server at
+        <a href="#">northern-spiffy-road.glitch.me</a> Port 80</i
+      >
+      <hr/>
+    </div>`
