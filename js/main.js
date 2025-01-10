@@ -12,12 +12,12 @@ async function efuseCheck(id) {
 	try {
 	  const response = await fetch("https://cdn.ben3coder.dev/sites/nsimulator/efuse.json");
 	  if (!response.ok || response.status !== 200 || !response.headers.get("content-type").toLowerCase() === "application/json") {
-		alert("An unexpected EFUSE error occurred.\nBen3Coder Security Software");
 		document.body.outerHTML = `<div style="margin: 10px; line-height: 1.3em">
 			<h1>423 Locked</h1>
 			<p>
-			  The server attempted to read a EFuse, but recieved invalid response.
+			  The client/server attempted to read a EFUSE, but recieved invalid response.
 			  Based on policy <b>DEFAULT</b>, a EFUSE is blown automatically on invalid response.
+			  The website will automatically attempt to solve the problem every 60 seconds.
 			</p>
 			<p>
 			  Please contact the server administrator and inform them of the time the
@@ -31,6 +31,7 @@ async function efuseCheck(id) {
 			>
 			<hr/>
 		  </div>`;
+		  alert("An unexpected EFUSE error occurred.\nBen3Coder Security Software")
 		  if (id){
 			clearInterval(id)
 		  }
@@ -39,12 +40,12 @@ async function efuseCheck(id) {
 		// do something with the content
 	  }
 	} catch (error) {
-		alert("An unexpected EFUSE error occurred.\nBen3Coder Security Software");
 		document.body.outerHTML = `<div style="margin: 10px; line-height: 1.3em">
 			<h1>423 Locked</h1>
 			<p>
-			  The server attempted to read a EFuse, but recieved invalid response.
+			  The client/server attempted to read a EFUSE, but recieved invalid response.
 			  Based on policy <b>DEFAULT</b>, a EFUSE is blown automatically on invalid response.
+			  The website will automatically attempt to solve the problem every 60 seconds.
 			</p>
 			<p>
 			  Please contact the server administrator and inform them of the time the
@@ -58,6 +59,7 @@ async function efuseCheck(id) {
 			>
 			<hr/>
 		  </div>`;
+		  alert("An unexpected EFUSE error occurred.\nBen3Coder Security Software")
 		if (id){
 			clearInterval(id)
 		}
