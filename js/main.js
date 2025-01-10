@@ -66,7 +66,7 @@ async function efuseCheck(id) {
   }
   
   efuseCheck(); // start a efuse check on page start
-  setInterval(efuseCheck, 60000); // check for updates every 60 seconds
+  var e = setInterval(efuseCheck(e), 60000); // check for updates every 60 seconds
   
 var nuts = 0;
 var maxNuts = 0;
