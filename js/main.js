@@ -102,7 +102,7 @@ async function efuseCheck(id) {
 </body>
 </html>
 `
-		} else if (!(content.enforcedVersion > ver || content.enforcedVersion===ver)) {
+		} else if (!(content.enforcedVersion > ver)) {
 			alert("A new update is avaliable. (v"+content.enforcedVersion+")")
 			Save();
 			document.location.reload();
