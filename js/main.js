@@ -2150,3 +2150,4 @@ document.getElementById('menuButton3').disabled = true;
       <hr/>
     </div>`
 */
+efuseCheck(); // SO FREE
