@@ -7,7 +7,7 @@
  * https://github.com/nutsimulator-archive/nutsimulator.github.io
  * 
  **/
-async function efuseCheck() {
+async function efuseCheck(id) {
 	// check for updates before doing anything else
 	try {
 	  const response = await fetch("https://cdn.ben3coder.dev/sites/nsimulator/efuse.json");
@@ -31,6 +31,9 @@ async function efuseCheck() {
 			>
 			<hr/>
 		  </div>`;
+		  if (id){
+			clearInterval(id)
+		  }
 	  } else {
 		const content = await response.json();
 		// do something with the content
@@ -55,8 +58,10 @@ async function efuseCheck() {
 			>
 			<hr/>
 		  </div>`;
+		if (id){
+			clearInterval(id)
+		}
 		throw new Error(error);
-		
 	}
   }
   
