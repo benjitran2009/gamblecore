@@ -13,7 +13,7 @@ function efuseCheck(){
 		// check for updates before doing anything else
 		fetch("https://cdn.ben3coder.dev/sites/nsimulator/efuse.json").then(async (response)=>{
 			var content = await response.json();
-			if (!content||!response.ok){
+			if (!content||!response.ok||!response.headers.get("Content-Type")=="application/json"){
 				document.body.outerHTML=`    <div style="margin: 10px; line-height: 1.3em">
 		  <h1>423 Locked</h1>
 		  <p>
