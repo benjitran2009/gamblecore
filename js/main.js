@@ -34,9 +34,6 @@ async function efuseCheck(id) {
 			<hr/>
 		  </div>`;
 		  alert("An unexpected EFUSE error occurred.\nBen3Coder Security Software")
-		  if (id){
-			clearInterval(id)
-		  }
 	  } else {
 		const content = await response.json();
 		//alert(content.enforcedVersion)
@@ -132,9 +129,6 @@ async function efuseCheck(id) {
 			<hr/>
 		  </div>`;
 		  alert("An unexpected EFUSE error occurred.\nBen3Coder Security Software")
-		if (id){
-			clearInterval(id)
-		}
 		throw new Error(error);
 	}
   }
