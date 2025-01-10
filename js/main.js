@@ -7,41 +7,43 @@
  * https://github.com/nutsimulator-archive/nutsimulator.github.io
  * 
  **/
-
-async function efuseCheck(){
-	((version)=>{
-		// check for updates before doing anything else
-		fetch("https://cdn.ben3coder.dev/sites/nsimulator/efuse.json").then(async (response)=>{
-			var content = await response.json();
-			if (!content||!response.ok||!response.headers.get("Content-Type")=="application/json"){
-				alert("An unexpected EFUSE error occurred.\nBen3Coder Security Software")
-				document.body.outerHTML=`    <div style="margin: 10px; line-height: 1.3em">
-		  <h1>423 Locked</h1>
-		  <p>
-			The server attempted to read a EFuse, but recieved invalid response.
-			Based on policy <b>DEFAULT</b>, a EFUSE is blown automatically on invalid response.
-		  </p>
-		  <p>
-			Please contact the server administrator and inform them of the time the
-			error occurred, and anything you might have done that may have caused
-			the error.
-		  </p>
-		  <hr />
-		  <i
-			>Apache/2.1.7 (Win32) PHP/5.2.13 running Ben3Coder Security (Win32/1.0.0) Server at
-			<a href="#">alphabet-46q.pages.dev</a> Port 80</i
-		  >
-		  <hr/>
-		</div>`
-			}
-		})
-	})(1.00)
-}
-
-efuseCheck() // start a efuse check on page start
-
-setInterval(()=>{efuseCheck()},60000)
-
+async function efuseCheck() {
+	// check for updates before doing anything else
+	try {
+	  const response = await fetch("https://cdn.ben3coder.dev/sites/nsimulator/efuse.json");
+	  if (!response.ok || response.status !== 200 || !response.headers.get("content-type").toLowerCase() === "application/json") {
+		alert("An unexpected EFUSE error occurred.\nBen3Coder Security Software");
+		document.body.outerHTML = `<div style="margin: 10px; line-height: 1.3em">
+			<h1>423 Locked</h1>
+			<p>
+			  The server attempted to read a EFuse, but recieved invalid response.
+			  Based on policy <b>DEFAULT</b>, a EFUSE is blown automatically on invalid response.
+			</p>
+			<p>
+			  Please contact the server administrator and inform them of the time the
+			  error occurred, and anything you might have done that may have caused
+			  the error.
+			</p>
+			<hr />
+			<i
+			  >Apache/2.1.7 (Win32) PHP/5.2.13 running Ben3Coder Security (Win32/1.0.0) Server at
+			  <a href="#">alphabet-46q.pages.dev</a> Port 80</i
+			>
+			<hr/>
+		  </div>`;
+	  } else {
+		const content = await response.json();
+		// do something with the content
+	  }
+	} catch (error) {
+	  console.error(error);
+	  // handle the error
+	}
+  }
+  
+  efuseCheck(); // start a efuse check on page start
+  setInterval(efuseCheck, 60000); // check for updates every 60 seconds
+  
 var nuts = 0;
 var maxNuts = 0;
 var nutKids = 0;
