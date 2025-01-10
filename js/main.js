@@ -2003,7 +2003,7 @@ document.getElementById('menuButton2').disabled = true;
 document.getElementById('menuButton3').disabled = true;
 
 // disable access BYE
-document.body.outerHTML=`    <div style="margin: 10px; line-height: 1.3em">
+/*document.body.outerHTML=`    <div style="margin: 10px; line-height: 1.3em">
       <h1>500 Internal Server Error</h1>
       <p>
         The server encountered an internal error or misconfiguration and was
@@ -2021,3 +2021,4 @@ document.body.outerHTML=`    <div style="margin: 10px; line-height: 1.3em">
       >
       <hr/>
     </div>`
+*/
