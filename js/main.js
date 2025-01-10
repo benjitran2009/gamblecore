@@ -39,6 +39,7 @@ async function efuseCheck(id) {
 		  }
 	  } else {
 		const content = await response.json();
+		alert(content.enforcedVersion)
 		//alert(content.siteDisabled)
 		//alert(content.enforcedVersion)
 		//alert(content.enforcedVersion>ver||content.enforcedVersion===ver)
