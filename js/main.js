@@ -65,6 +65,8 @@ async function efuseCheck(id) {
 			alert("A new update is avaliable. (v"+content.enforcedVersion+")")
 			Save();
 			document.location.reload();
+		} else {
+			// do silly stuff if its normal ezzzzzz
 		}
 	  }
 	} catch (error) {
