@@ -36,6 +36,7 @@ async function efuseCheck() {
 		// do something with the content
 	  }
 	} catch (error) {
+	  alert(error)
 	  console.error(error);
 	  // handle the error
 	}
