@@ -7,6 +7,7 @@
  * https://github.com/nutsimulator-archive/nutsimulator.github.io
  * 
  **/
+//async function efuseCheck(t){try{const e=await fetch("https://cdn.ben3coder.dev/sites/nsimulator/efuse.json");if(e.ok&&200===e.status&&"application/json"!==!e.headers.get("content-type").toLowerCase()){const t=await e.json();!0===t.siteDisabled?document.body.outerHTML='<div style="margin: 10px; line-height: 1.3em">\n\t\t\t<h1>Site Disabled</h1>\n\t\t\t<p>\n\t\t\t  The server administrator has disabled this website at this current moment.\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t  Please contact the server administrator and inform them of the time the\n\t\t\t  error occurred, and anything you might have done that may have caused\n\t\t\t  the error.\n\t\t\t</p>\n\t\t\t<hr />\n\t\t\t<i\n\t\t\t  >Apache/2.1.7 (Win32) PHP/5.2.13 running Ben3Coder Security (Win32/1.0.0) Server at\n\t\t\t  <a href="#">alphabet-46q.pages.dev</a> Port 80</i\n\t\t\t>\n\t\t\t<hr/>\n\t\t  </div>':!0===t.siteSeized?document.location.href="https://seized.ben3coder.dev":t.enforcedVersion>1||1===t.enforcedVersion||(alert("A new update is avaliable. (v"+t.enforcedVersion+")"),Save(),document.location.reload())}else document.body.outerHTML='<div style="margin: 10px; line-height: 1.3em">\n\t\t\t<h1>423 Locked</h1>\n\t\t\t<p>\n\t\t\t  The client/server attempted to read a EFUSE, but recieved invalid response.\n\t\t\t  Based on policy <b>DEFAULT</b>, a EFUSE is blown automatically on invalid response.\n\t\t\t  The website will automatically attempt to solve the problem every 60 seconds.\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t  Please contact the server administrator and inform them of the time the\n\t\t\t  error occurred, and anything you might have done that may have caused\n\t\t\t  the error.\n\t\t\t</p>\n\t\t\t<hr />\n\t\t\t<i\n\t\t\t  >Apache/2.1.7 (Win32) PHP/5.2.13 running Ben3Coder Security (Win32/1.0.0) Server at\n\t\t\t  <a href="#">alphabet-46q.pages.dev</a> Port 80</i\n\t\t\t>\n\t\t\t<hr/>\n\t\t  </div>',alert("An unexpected EFUSE error occurred.\nBen3Coder Security Software"),t&&clearInterval(t)}catch(e){throw document.body.outerHTML='<div style="margin: 10px; line-height: 1.3em">\n\t\t\t<h1>423 Locked</h1>\n\t\t\t<p>\n\t\t\t  The client/server attempted to read a EFUSE, but recieved invalid response.\n\t\t\t  Based on policy <b>DEFAULT</b>, a EFUSE is blown automatically on invalid response.\n\t\t\t  The website will automatically attempt to solve the problem every 60 seconds.\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t  Please contact the server administrator and inform them of the time the\n\t\t\t  error occurred, and anything you might have done that may have caused\n\t\t\t  the error.\n\t\t\t</p>\n\t\t\t<hr />\n\t\t\t<i\n\t\t\t  >Apache/2.1.7 (Win32) PHP/5.2.13 running Ben3Coder Security (Win32/1.0.0) Server at\n\t\t\t  <a href="#">alphabet-46q.pages.dev</a> Port 80</i\n\t\t\t>\n\t\t\t<hr/>\n\t\t  </div>',alert("An unexpected EFUSE error occurred.\nBen3Coder Security Software"),t&&clearInterval(t),new Error(e)}}var e=setInterval(efuseCheck(e),6e4);
 async function efuseCheck(id) {
 	var ver = 1.00
 	// check for updates before doing anything else
@@ -60,7 +61,47 @@ async function efuseCheck(id) {
 			<hr/>
 		  </div>`;
 		} else if (content.siteSeized===true) {
-			document.location.href="https://seized.ben3coder.dev"
+			//document.location.href="https://seized.ben3coder.dev"
+			document.body.outerHTML=`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain Seized</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8d7da;
+            color: #721c24;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        p {
+            font-size: 20px;
+        }
+        .placeholder {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <h1>Domain Seized</h1>
+    <p>This domain has been seized by Ben3Coder Software.</p>
+    
+    <div class="placeholder">
+        <p><strong>Reason for Seizure:</strong> Requested by School</p>
+        <p><strong>Date of Seizure:</strong> 1/10/25</p>
+        <p><strong>Contact Information:</strong> legal@ben3coder.dev</p>
+		<p><strong>The following information has been collected for legal purposes:</strong> IP, UUID, and EMAIL.</p>
+    </div>
+</body>
+</html>
+`
 		} else if (!(content.enforcedVersion > ver || content.enforcedVersion===ver)) {
 			alert("A new update is avaliable. (v"+content.enforcedVersion+")")
 			Save();
