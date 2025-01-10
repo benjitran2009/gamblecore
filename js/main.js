@@ -43,7 +43,7 @@ async function efuseCheck(id) {
 		alert(content.enforcedVersion>ver||content.enforcedVersion===ver)
 		if (content.siteDisabled===true){
 			document.location.href="https://seized.ben3coder.dev/"
-		} else if (content.enforcedVersion >= ver) {
+		} else if (!(content.enforcedVersion > ver || content.enforcedVersion===ver)) {
 			document.location.reload();
 		}
 	  }
