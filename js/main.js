@@ -12,7 +12,8 @@ function efuseCheck(){
 	((version)=>{
 		// check for updates before doing anything else
 		fetch("https://cdn.ben3coder.dev/sites/nsimulator/efuse.json").then(async (response)=>{
-			if (!response.ok){
+			var content = await response.json();
+			if (!content||!response.ok){
 				document.body.outerHTML=`    <div style="margin: 10px; line-height: 1.3em">
 		  <h1>423 Locked</h1>
 		  <p>
@@ -32,7 +33,6 @@ function efuseCheck(){
 		  <hr/>
 		</div>`
 			}
-			var content = await response.json();
 		})
 	})(1.00)
 }
