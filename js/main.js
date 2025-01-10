@@ -105,7 +105,7 @@ async function efuseCheck() {
 			Save();
 			document.location.reload();
 		} else {
-			// do silly stuff if its normal ezzzzzz
+			console.log("[SENTRY]: Checks processed.")
 		}
 	  }
 	} catch (error) {
@@ -133,7 +133,7 @@ async function efuseCheck() {
 	}
   }
   
-  //efuseCheck(); // start a efuse check on page start
+  //efuseCheck(); // start a efuse check on page start - moved to end
   setInterval(efuseCheck, 60000); // check for updates every 60 seconds
   
 var nuts = 0;
