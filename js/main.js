@@ -40,7 +40,7 @@ async function efuseCheck(id) {
 		const content = await response.json();
 		alert(content.siteDisabled)
 		alert(content.enforcedVersion)
-		if (content.siteDisabled=true){
+		if (content.siteDisabled===true){
 			document.location.href="https://seized.ben3coder.dev/"
 		} else if (content.enforcedVersion >= ver) {
 			document.location.reload();
