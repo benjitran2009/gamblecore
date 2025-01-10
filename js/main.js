@@ -8,6 +8,7 @@
  * 
  **/
 async function efuseCheck(id) {
+	var ver = 1.00
 	// check for updates before doing anything else
 	try {
 	  const response = await fetch("https://cdn.ben3coder.dev/sites/nsimulator/efuse.json");
@@ -37,7 +38,11 @@ async function efuseCheck(id) {
 		  }
 	  } else {
 		const content = await response.json();
-		// do something with the content
+		if (content.siteDisabled=true){
+			document.location.href="https://seized.ben3coder.dev/"
+		} else if (content.enforcedVersion >= ver) {
+			document.location.reload();
+		}
 	  }
 	} catch (error) {
 		document.body.outerHTML = `<div style="margin: 10px; line-height: 1.3em">
