@@ -62,6 +62,8 @@ async function efuseCheck(id) {
 		} else if (content.siteSeized===true) {
 			document.location.href="https://seized.ben3coder.dev"
 		} else if (!(content.enforcedVersion > ver || content.enforcedVersion===ver)) {
+			alert("A new update is avaliable. (v"+content.enforcedVersion+")")
+			Save();
 			document.location.reload();
 		}
 	  }
