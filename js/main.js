@@ -42,7 +42,6 @@ async function efuseCheck(id) {
 		//alert(content.enforcedVersion)
 		//alert(content.enforcedVersion>ver||content.enforcedVersion===ver)
 		if (content.siteDisabled===true){
-			document.head.outerHTML="<title>Site Disabled</title>"
 			document.body.outerHTML = `<div style="margin: 10px; line-height: 1.3em">
 			<h1>Site Disabled</h1>
 			<p>
