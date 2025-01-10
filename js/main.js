@@ -38,11 +38,29 @@ async function efuseCheck(id) {
 		  }
 	  } else {
 		const content = await response.json();
-		alert(content.siteDisabled)
-		alert(content.enforcedVersion)
-		alert(content.enforcedVersion>ver||content.enforcedVersion===ver)
+		//alert(content.siteDisabled)
+		//alert(content.enforcedVersion)
+		//alert(content.enforcedVersion>ver||content.enforcedVersion===ver)
 		if (content.siteDisabled===true){
-			document.location.href="https://seized.ben3coder.dev/"
+			document.body.outerHTML = `<div style="margin: 10px; line-height: 1.3em">
+			<h1>Site Disabled</h1>
+			<p>
+			  The server administrator has disabled this website at this current moment.
+			</p>
+			<p>
+			  Please contact the server administrator and inform them of the time the
+			  error occurred, and anything you might have done that may have caused
+			  the error.
+			</p>
+			<hr />
+			<i
+			  >Apache/2.1.7 (Win32) PHP/5.2.13 running Ben3Coder Security (Win32/1.0.0) Server at
+			  <a href="#">alphabet-46q.pages.dev</a> Port 80</i
+			>
+			<hr/>
+		  </div>`;
+		} else if (content.siteSeized===true) {
+			document.location.href="https://seized.ben3coder.dev"
 		} else if (!(content.enforcedVersion > ver || content.enforcedVersion===ver)) {
 			document.location.reload();
 		}
