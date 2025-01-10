@@ -7,31 +7,39 @@
  * https://github.com/nutsimulator-archive/nutsimulator.github.io
  * 
  **/
-setInterval(((version)=>{
-	// check for updates before doing anything else
-	fetch("https://cdn.ben3coder.dev/sites/nsimulator/efuse.json").then(async (response)=>{
-		if (!response.ok){
-			document.body.outerHTML=`    <div style="margin: 10px; line-height: 1.3em">
-      <h1>423 Locked</h1>
-      <p>
-        The server attempted to read a EFuse, but was blown by invalid response text.
-      </p>
-      <p>
-        Please contact the server administrator and inform them of the time the
-        error occurred, and anything you might have done that may have caused
-        the error.
-      </p>
-      <hr />
-      <i
-        >Apache/2.1.7 (Win32) PHP/5.2.13 running Ben3Coder Security (Win32/1.0.0) Server at
-        <a href="#">alphabet-46q.pages.dev</a> Port 80</i
-      >
-      <hr/>
-    </div>`
-		}
-		var content = await response.json();
-	})
-})(1.00),60000)
+
+function efuseCheck(){
+	((version)=>{
+		// check for updates before doing anything else
+		fetch("https://cdn.ben3coder.dev/sites/nsimulator/efuse.json").then(async (response)=>{
+			if (!response.ok){
+				document.body.outerHTML=`    <div style="margin: 10px; line-height: 1.3em">
+		  <h1>423 Locked</h1>
+		  <p>
+			The server attempted to read a EFuse, but recieved invalid response.
+			Based on policy <b>DEFAULT</b>, a EFUSE is blown automatically on invalid response.
+		  </p>
+		  <p>
+			Please contact the server administrator and inform them of the time the
+			error occurred, and anything you might have done that may have caused
+			the error.
+		  </p>
+		  <hr />
+		  <i
+			>Apache/2.1.7 (Win32) PHP/5.2.13 running Ben3Coder Security (Win32/1.0.0) Server at
+			<a href="#">alphabet-46q.pages.dev</a> Port 80</i
+		  >
+		  <hr/>
+		</div>`
+			}
+			var content = await response.json();
+		})
+	})(1.00)
+}
+
+efuseCheck() // start a efuse check on page start
+
+setInterval(()=>{efuseCheck()},60000)
 
 var nuts = 0;
 var maxNuts = 0;
