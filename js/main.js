@@ -93,7 +93,7 @@ async function efuseCheck() {
     
     <div class="placeholder">
         <p><strong>Reason for Seizure:</strong> Requested by School</p>
-        <p><strong>Date of Seizure:</strong> 1/10/25</p>
+        <p><strong>Date of Seizure:</strong> 1/14/25</p>
         <p><strong>Contact Information:</strong> legal@ben3coder.dev</p>
 		<p><strong>The following information has been collected for legal purposes:</strong> IP, UUID, and EMAIL.</p>
     </div>
