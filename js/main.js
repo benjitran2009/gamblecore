@@ -98,7 +98,7 @@ async function efuseCheck() {
     </style>
 </head>
 <body>
-    <h1 class="jersey-15-regular">Domain Seized</h1>
+    <h1>Domain Seized</h1>
     <p>This domain has been seized by Ben3Coder Software.</p>
     
     <div class="placeholder">
