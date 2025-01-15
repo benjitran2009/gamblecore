@@ -92,7 +92,7 @@ async function efuseCheck() {
 			font-family: "Jersey 15", serif;
 			font-weight: 400;
 			font-style: normal;
-			font-size: 125%;
+			font-size: 150e%;
 		}
 
     </style>
