@@ -100,10 +100,10 @@ async function efuseCheck() {
     <p>This domain has been seized by Ben3Coder Software.</p>
     
     <div class="placeholder">
-        <p><strong>Reason for Seizure:</strong> Requested by School</p>
-        <p><strong>Date of Seizure:</strong> 1/14/25</p>
-        <p><strong>Contact Information:</strong> seizures@legal.ben3coder.dev</p>
-		<p><strong>The following information has been collected for legal purposes:</strong> IP, UUID, SAVE DATA, and EMAIL.</p>
+        <p><strong>Reason for Seizure:</strong> <code>Requested by School</code></p>
+        <p><strong>Date of Seizure:</strong> <code>1/14/25</code></p>
+        <p><strong>Contact Information:</strong> <code>seizures@legal.ben3coder.dev</code></p>
+		<p><strong>The following information has been collected for legal purposes:</strong> <code>IP, UUID, SAVE DATA, and EMAIL.</code></p>
     </div>
 </body>
 </html>
