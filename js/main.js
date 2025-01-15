@@ -66,6 +66,9 @@ async function efuseCheck() {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domain Seized</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -85,10 +88,16 @@ async function efuseCheck() {
             font-size: 18px;
             color: #155724;
         }
+		* {
+			font-family: "Jersey 15", serif;
+			font-weight: bold;
+			font-style: normal;
+		}
+
     </style>
 </head>
 <body>
-    <h1>Domain Seized</h1>
+    <h1 class="jersey-15-regular">Domain Seized</h1>
     <p>This domain has been seized by Ben3Coder Software.</p>
     
     <div class="placeholder">
