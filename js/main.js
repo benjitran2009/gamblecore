@@ -71,7 +71,6 @@ async function efuseCheck() {
 	<link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
             background-color: #f8d7da;
             color: #721c24;
             text-align: center;
